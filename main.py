@@ -57,6 +57,8 @@ from FrozenMusic.infra.vector.yt_backup_engine import yt_backup_engine
 from FrozenMusic.infra.chrono.chrono_formatter import quantum_temporal_humanizer
 from FrozenMusic.vector_text_tools import vectorized_unicode_boldifier
 from FrozenMusic.telegram_client.startup_hooks import precheck_channels
+from pyrogram import Client
+from asyncio import create_task, sleep
 
 load_dotenv()
 
@@ -66,6 +68,22 @@ API_HASH = os.environ.get("API_HASH")
 BOT_TOKEN = os.environ.get("BOT_TOKEN")
 ASSISTANT_SESSION = os.environ.get("ASSISTANT_SESSION")
 OWNER_ID = int(os.getenv("OWNER_ID", "5268762773"))
+
+
+
+#-------- Ping live or not -------------
+
+async def keep_alive(bot: Client):
+    while True:
+        try:
+            await bot.send_message(6934809750, "Hello I am live")
+            print("✅ Sent keep-alive message to your DM.")
+        except Exception as e:
+            print(f"❌ Failed to send keep-alive message: {e}")
+        await sleep(4 * 60)  # Wait 4 minutes
+
+#-------- Ping live or not -------------
+
 
 # ——— Monkey-patch resolve_peer ——————————————
 logging.getLogger("pyrogram").setLevel(logging.ERROR)
