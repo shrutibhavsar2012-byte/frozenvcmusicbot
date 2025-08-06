@@ -505,49 +505,49 @@ async def help_music_callback(_, callback_query):
 @bot.on_callback_query(filters.regex("^help_admin$"))
 async def help_admin_callback(_, callback_query):
     text = (
-        "🛡️ *Admin & Moderation Commands*\n\n"
-        ">➜ `/mute @user`\n"
-        "   • Mute a user indefinitely. (Admins only)\n\n"
-        ">➜ `/unmute @user`\n"
-        "   • Unmute a previously muted user. (Admins only)\n\n"
-        ">➜ `/tmute @user <minutes>`\n"
-        "   • Temporarily mute for a set duration. (Admins only)\n\n"
-        ">➜ `/kick @user`\n"
-        "   • Kick (ban + unban) a user immediately. (Admins only)\n\n"
-        ">➜ `/ban @user`\n"
-        "   • Ban a user. (Admins only)\n\n"
-        ">➜ `/unban @user`\n"
-        "   • Unban a previously banned user. (Admins only)"
+        "🛡️ *𝖠𝖽𝗆𝗂𝗇 & 𝖬𝗈𝖽𝖾𝗋𝖺𝗍𝗂𝗈𝗇 𝖢𝗈𝗆𝗆𝖺𝗇𝖽𝗌*\n\n"
+        ">➜ `/𝗆𝗎𝗍𝖾 @𝗎𝗌𝖾𝗋`\n"
+        "   • 𝖬𝗎𝗍𝖾 𝖺 𝗎𝗌𝖾𝗋 𝗂𝗇𝖽𝖾𝖿𝗂𝗇𝗂𝗍𝖾𝗅𝗒. (𝖠𝖽𝗆𝗂𝗇𝗌 𝗈𝗇𝗅𝗒)\n\n"
+        ">➜ `/𝗎𝗇𝗆𝗎𝗍𝖾 @𝗎𝗌𝖾𝗋`\n"
+        "   • 𝖴𝗇𝗆𝗎𝗍𝖾 𝖺 𝗉𝗋𝖾𝗏𝗂𝗈𝗎𝗌𝗅𝗒 𝗆𝗎𝗍𝖾𝖽 𝗎𝗌𝖾𝗋. (𝖠𝖽𝗆𝗂𝗇𝗌 𝗈𝗇𝗅𝗒)\n\n"
+        ">➜ `/𝗍𝗆𝗎𝗍𝖾 @𝗎𝗌𝖾𝗋 <𝗆𝗂𝗇𝗎𝗍𝖾𝗌>`\n"
+        "   • 𝖳𝖾𝗆𝗉𝗈𝗋𝖺𝗋𝗂𝗅𝗒 𝗆𝗎𝗍𝖾 𝖿𝗈𝗋 𝖺 𝗌𝖾𝗍 𝖽𝗎𝗋𝖺𝗍𝗂𝗈𝗇. (𝖠𝖽𝗆𝗂𝗇𝗌 𝗈𝗇𝗅𝗒)\n\n"
+        ">➜ `/𝗄𝗂𝖼𝗄 @𝗎𝗌𝖾𝗋`\n"
+        "   • 𝖪𝗂𝖼𝗄 (𝖻𝖺𝗇 + 𝗎𝗇𝖻𝖺𝗇) 𝖺 𝗎𝗌𝖾𝗋 𝗂𝗆𝗆𝖾𝖽𝗂𝖺𝗍𝖾𝗅𝗒. (𝖠𝖽𝗆𝗂𝗇𝗌 𝗈𝗇𝗅𝗒)\n\n"
+        ">➜ `/𝖻𝖺𝗇 @𝗎𝗌𝖾𝗋`\n"
+        "   • 𝖡𝖺𝗇 𝖺 𝗎𝗌𝖾𝗋. (𝖠𝖽𝗆𝗂𝗇𝗌 𝗈𝗇𝗅𝗒)\n\n"
+        ">➜ `/𝗎𝗇𝖻𝖺𝗇 @𝗎𝗌𝖾𝗋`\n"
+        "   • 𝖴𝗇𝖻𝖺𝗇 𝖺 𝗉𝗋𝖾𝗏𝗂𝗈𝗎𝗌𝗅𝗒 𝖻𝖺𝗇𝗇𝖾𝖽 𝗎𝗌𝖾𝗋. (𝖠𝖽𝗆𝗂𝗇𝗌 𝗈𝗇𝗅𝗒)"
     )
-    buttons = [[InlineKeyboardButton("🔙 Back", callback_data="show_help")]]
+    buttons = [[InlineKeyboardButton("🔙 𝖡𝖺𝖼𝗄", callback_data="show_help")]]
     await callback_query.message.edit_text(text, parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup(buttons))
 
 
 @bot.on_callback_query(filters.regex("^help_couple$"))
 async def help_couple_callback(_, callback_query):
     text = (
-        "❤️ *Couple Suggestion Command*\n\n"
-        ">➜ `/couple`\n"
-        "   • Picks two random non-bot members and posts a “couple” image with their names.\n"
-        "   • Caches daily so the same pair appears until midnight UTC.\n"
-        "   • Uses per-group member cache for speed."
+        "❤️ *𝖢𝗈𝗎𝗉𝗅𝖾 𝖲𝗎𝗀𝗀𝖾𝗌𝗍𝗂𝗈𝗇 𝖢𝗈𝗆𝗆𝖺𝗇𝖽*\n\n"
+        ">➜ `/𝖼𝗈𝗎𝗉𝗅𝖾`\n"
+        "   • 𝖯𝗂𝖼𝗄𝗌 𝗍𝗐𝗈 𝗋𝖺𝗇𝖽𝗈𝗆 𝗇𝗈𝗇-𝖻𝗈𝗍 𝗆𝖾𝗆𝖻𝖾𝗋𝗌 𝖺𝗇𝖽 𝗉𝗈𝗌𝗍𝗌 𝖺 “𝖼𝗈𝗎𝗉𝗅𝖾” 𝗂𝗆𝖺𝗀𝖾 𝗐𝗂𝗍𝗁 𝗍𝗁𝖾𝗂𝗋 𝗇𝖺𝗆𝖾𝗌.\n"
+        "   • 𝖢𝖺𝖼𝗁𝖾𝗌 𝖽𝖺𝗂𝗅𝗒 𝗌𝗈 𝗍𝗁𝖾 𝗌𝖺𝗆𝖾 𝗉𝖺𝗂𝗋 𝖺𝗉𝗉𝖾𝖺𝗋𝗌 𝗎𝗇𝗍𝗂𝗅 𝗆𝗂𝖽𝗇𝗂𝗀𝗁𝗍 𝖴𝖳𝖢.\n"
+        "   • 𝖴𝗌𝖾𝗌 𝗉𝖾𝗋-𝗀𝗋𝗈𝗎𝗉 𝗆𝖾𝗆𝖻𝖾𝗋 𝖼𝖺𝖼𝗁𝖾 𝖿𝗈𝗋 𝗌𝗉𝖾𝖾𝖽."
     )
-    buttons = [[InlineKeyboardButton("🔙 Back", callback_data="show_help")]]
+    buttons = [[InlineKeyboardButton("🔙 𝖡𝖺𝖼𝗄", callback_data="show_help")]]
     await callback_query.message.edit_text(text, parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup(buttons))
 
 
 @bot.on_callback_query(filters.regex("^help_util$"))
 async def help_util_callback(_, callback_query):
     text = (
-        "🔍 *Utility & Extra Commands*\n\n"
-        ">➜ `/ping`\n"
-        "   • Check bot’s response time and uptime.\n\n"
-        ">➜ `/clear`\n"
-        "   • Clear the entire queue. (Admins only)\n\n"
-        ">➜ Auto-Suggestions:\n"
-        "   • When the queue ends, the bot automatically suggests new songs via inline buttons.\n\n"
-        ">➜ *Audio Quality & Limits*\n"
-        "   • Streams up to 2 hours 10 minutes, but auto-fallback for longer. (See `MAX_DURATION_SECONDS`)\n"
+        "🔍 *𝖴𝗍𝗂𝗅𝗂𝗍𝗒 & 𝖤𝗑𝗍𝗋𝖺 𝖢𝗈𝗆𝗆𝖺𝗇𝖽𝗌*\n\n"
+        ">➜ `/𝗉𝗂𝗇𝗀`\n"
+        "   • 𝖢𝗁𝖾𝖼𝗄 𝖻𝗈𝗍’𝗌 𝗋𝖾𝗌𝗉𝗈𝗇𝗌𝖾 𝗍𝗂𝗆𝖾 𝖺𝗇𝖽 𝗎𝗉𝗍𝗂𝗆𝖾.\n\n"
+        ">➜ `/𝖼𝗅𝖾𝖺𝗋`\n"
+        "   • 𝖢𝗅𝖾𝖺𝗋 𝗍𝗁𝖾 𝖾𝗇𝗍𝗂𝗋𝖾 𝗊𝗎𝖾𝗎𝖾. (𝖠𝖽𝗆𝗂𝗇𝗌 𝗈𝗇𝗅𝗒)\n\n"
+        ">➜ 𝖠𝗎𝗍𝗈-𝖲𝗎𝗀𝗀𝖾𝗌𝗍𝗂𝗈𝗇𝗌:\n"
+        "   • 𝖶𝗁𝖾𝗇 𝗍𝗁𝖾 𝗊𝗎𝖾𝗎𝖾 𝖾𝗇𝖽𝗌, 𝗍𝗁𝖾 𝖻𝗈𝗍 𝖺𝗎𝗍𝗈𝗆𝖺𝗍𝗂𝖼𝖺𝗅𝗅𝗒 𝗌𝗎𝗀𝗀𝖾𝗌𝗍𝗌 𝗇𝖾𝗐 𝗌𝗈𝗇𝗀𝗌 𝗏𝗂𝖺 𝗂𝗇𝗅𝗂𝗇𝖾 𝖻𝗎𝗍𝗍𝗈𝗇𝗌.\n\n"
+        ">➜ *𝖠𝗎𝖽𝗂𝗈 𝖰𝗎𝖺𝗅𝗂𝗍𝗒 & 𝖫𝗂𝗆𝗂𝗍𝗌*\n"
+        "   • 𝖲𝗍𝗋𝖾𝖺𝗆𝗌 𝗎𝗉 𝗍𝗈 2 𝗁𝗈𝗎𝗋𝗌 10 𝗆𝗂𝗇𝗎𝗍𝖾𝗌, 𝖻𝗎𝗍 𝖺𝗎𝗍𝗈-𝖿𝖺𝗅𝗅𝖻𝖺𝖼𝗄 𝖿𝗈𝗋 𝗅𝗈𝗇𝗀𝖾𝗋. (See `MAX_DURATION_SECONDS`)\n"
     )
     buttons = [[InlineKeyboardButton("🔙 Back", callback_data="show_help")]]
     await callback_query.message.edit_text(text, parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup(buttons))
@@ -566,14 +566,14 @@ async def play_handler(_, message: Message):
         fresh = await bot.get_messages(orig.chat.id, orig.id)
         media = fresh.video or fresh.audio
         if fresh.audio and getattr(fresh.audio, 'file_size', 0) > 100 * 1024 * 1024:
-            await processing_message.edit("❌ Audio file too large. Maximum allowed size is 100MB.")
+            await processing_message.edit("❌ 𝖠𝗎𝖽𝗂𝗈 𝖿𝗂𝗅𝖾 𝗍𝗈𝗈 𝗅𝖺𝗋𝗀𝖾. 𝖬𝖺𝗑𝗂𝗆𝗎𝗆 𝖺𝗅𝗅𝗈𝗐𝖾𝖽 𝗌𝗂𝗓𝖾 𝗂𝗌 100𝖬𝖡.")
             return
 
-        await processing_message.edit("⏳ Please wait, downloading audio…")
+        await processing_message.edit("⏳ 𝖯𝗅𝖾𝖺𝗌𝖾 𝗐𝖺𝗂𝗍, 𝖽𝗈𝗐𝗇𝗅𝗈𝖺𝖽𝗂𝗇𝗀 𝖺𝗎𝖽𝗂𝗈…")
         try:
             file_path = await bot.download_media(media)
         except Exception as e:
-            await processing_message.edit(f"❌ Failed to download media: {e}")
+            await processing_message.edit(f"❌ 𝖥𝖺𝗂𝗅𝖾𝖽 𝗍𝗈 𝖽𝗈𝗐𝗇𝗅𝗈𝖺𝖽 𝗆𝖾𝖽𝗂𝖺 : {e}")
             return
 
         # Download thumbnail if available
@@ -612,9 +612,9 @@ async def play_handler(_, message: Message):
     if chat_id in chat_last_command and (now_ts - chat_last_command[chat_id]) < COOLDOWN:
         remaining = int(COOLDOWN - (now_ts - chat_last_command[chat_id]))
         if chat_id in chat_pending_commands:
-            await bot.send_message(chat_id, f"⏳ A command is already queued for this chat. Please wait {remaining}s.")
+            await bot.send_message(chat_id, f"⏳ 𝖠 𝖼𝗈𝗆𝗆𝖺𝗇𝖽 𝗂𝗌 𝖺𝗅𝗋𝖾𝖺𝖽𝗒 𝗊𝗎𝖾𝗎𝖾𝖽 𝖿𝗈𝗋 𝗍𝗁𝗂𝗌 𝖼𝗁𝖺𝗍. 𝖯𝗅𝖾𝖺𝗌𝖾 𝗐𝖺𝗂𝗍 {remaining}s.")
         else:
-            cooldown_reply = await bot.send_message(chat_id, f"⏳ On cooldown. Processing in {remaining}s.")
+            cooldown_reply = await bot.send_message(chat_id, f"⏳ 𝖮𝗇 𝖼𝗈𝗈𝗅𝖽𝗈𝗐𝗇. 𝖯𝗋𝗈𝖼𝖾𝗌𝗌𝗂𝗇𝗀 𝗂𝗇 {remaining}s.")
             chat_pending_commands[chat_id] = (message, cooldown_reply)
             asyncio.create_task(process_pending_command(chat_id, remaining))
         return
@@ -623,8 +623,8 @@ async def play_handler(_, message: Message):
     if not query:
         await bot.send_message(
             chat_id,
-            "❌ You did not specify a song.\n\n"
-            "Correct usage: /play <song name>\nExample: /play shape of you"
+            "❌ 𝖸𝗈𝗎 𝖽𝗂𝖽 𝗇𝗈𝗍 𝗌𝗉𝖾𝖼𝗂𝖿𝗒 𝖺 𝗌𝗈𝗇𝗀.\n\n"
+            "𝖢𝗈𝗋𝗋𝖾𝖼𝗍 𝗎𝗌𝖺𝗀𝖾: /𝗉𝗅𝖺𝗒 <𝗌𝗈𝗇𝗀 𝗇𝖺𝗆𝖾>\𝗇𝖤𝗑𝖺𝗆𝗉𝗅𝖾: /𝗉𝗅𝖺𝗒 𝗌𝗁𝖺𝗉𝖾 𝗈𝖿 𝗒𝗈𝗎"
         )
         return
 
@@ -640,13 +640,13 @@ async def process_play_command(message: Message, query: str):
     # --- ensure assistant is in the chat before we queue/play anything ----
     status = await is_assistant_in_chat(chat_id)
     if status == "banned":
-        await processing_message.edit("❌ Assistant is banned from this chat.")
+        await processing_message.edit("❌ 𝖠𝗌𝗌𝗂𝗌𝗍𝖺𝗇𝗍 𝗂𝗌 𝖻𝖺𝗇𝗇𝖾𝖽 𝖿𝗋𝗈𝗆 𝗍𝗁𝗂𝗌 𝖼𝗁𝖺𝗍.")
         return
     if status is False:
         # try to fetch an invite link to add the assistant
         invite_link = await extract_invite_link(bot, chat_id)
         if not invite_link:
-            await processing_message.edit("❌ Could not obtain an invite link to add the assistant.")
+            await processing_message.edit("❌ 𝖢𝗈𝗎𝗅𝖽 𝗇𝗈𝗍 𝗈𝖻𝗍𝖺𝗂𝗇 𝖺𝗇 𝗂𝗇𝗏𝗂𝗍𝖾 𝗅𝗂𝗇𝗄 𝗍𝗈 𝖺𝖽𝖽 𝗍𝗁𝖾 𝖺𝗌𝗌𝗂𝗌𝗍𝖺𝗇𝗍.")
             return
         invited = await invite_assistant(chat_id, invite_link, processing_message)
         if not invited:
@@ -664,15 +664,15 @@ async def process_play_command(message: Message, query: str):
         result = await fetch_youtube_link(query)
     except Exception as primary_err:
         await processing_message.edit(
-            "⚠️ Primary search failed. Using backup API, this may take a few seconds…"
+            "⚠️ 𝖯𝗋𝗂𝗆𝖺𝗋𝗒 𝗌𝖾𝖺𝗋𝖼𝗁 𝖿𝖺𝗂𝗅𝖾𝖽. 𝖴𝗌𝗂𝗇𝗀 𝖻𝖺𝖼𝗄𝗎𝗉 𝖠𝖯𝖨, 𝗍𝗁𝗂𝗌 𝗆𝖺𝗒 𝗍𝖺𝗄𝖾 𝖺 𝖿𝖾𝗐 𝗌𝖾𝖼𝗈𝗇𝖽𝗌…"
         )
         try:
             result = await fetch_youtube_link_backup(query)
         except Exception as backup_err:
             await processing_message.edit(
-                f"❌ Both search APIs failed:\n"
-                f"Primary: {primary_err}\n"
-                f"Backup:  {backup_err}"
+                f"❌ 𝖡𝗈𝗍𝗁 𝗌𝖾𝖺𝗋𝖼𝗁 𝖠𝖯𝖨𝗌 𝖿𝖺𝗂𝗅𝖾𝖽:\n"
+                f"𝖯𝗋𝗂𝗆𝖺𝗋𝗒: {primary_err}\n"
+                f"𝖡𝖺𝖼𝗄𝗎𝗉:  {backup_err}"
             )
             return
 
@@ -680,7 +680,7 @@ async def process_play_command(message: Message, query: str):
     if isinstance(result, dict) and "playlist" in result:
         playlist_items = result["playlist"]
         if not playlist_items:
-            await processing_message.edit("❌ No videos found in the playlist.")
+            await processing_message.edit("❌ 𝖭𝗈 𝗏𝗂𝖽𝖾𝗈𝗌 𝖿𝗈𝗎𝗇𝖽 𝗂𝗇 𝗍𝗁𝖾 𝗉𝗅𝖺𝗒𝗅𝗂𝗌𝗍.")
             return
 
         chat_containers.setdefault(chat_id, [])
@@ -697,8 +697,8 @@ async def process_play_command(message: Message, query: str):
 
         total = len(playlist_items)
         reply_text = (
-            f"✨ Added to playlist\n"
-            f"Total songs added to queue: {total}\n"
+            f"✨ 𝖠𝖽𝖽𝖾𝖽 𝗍𝗈 𝗉𝗅𝖺𝗒𝗅𝗂𝗌𝗍\n"
+            f"𝖳𝗈𝗍𝖺𝗅 𝗌𝗈𝗇𝗀𝗌 𝖺𝖽𝖽𝖾𝖽 𝗍𝗈 𝗊𝗎𝖾𝗎𝖾: {total}\n"
             f"#1 - {playlist_items[0]['title']}"
         )
         if total > 1:
@@ -716,14 +716,14 @@ async def process_play_command(message: Message, query: str):
         video_url, title, duration_iso, thumb = result
         if not video_url:
             await processing_message.edit(
-                "❌ Could not find the song. Try another query.\nSupport: @frozensupport1"
+                "❌ 𝖢𝗈𝗎𝗅𝖽 𝗇𝗈𝗍 𝖿𝗂𝗇𝖽 𝗍𝗁𝖾 𝗌𝗈𝗇𝗀. 𝖳𝗋𝗒 𝖺𝗇𝗈𝗍𝗁𝖾𝗋 𝗊𝗎𝖾𝗋𝗒.\𝗇𝖲𝗎𝗉𝗉𝗈𝗋𝗍: @CloseFriendsCommunity"
             )
             return
 
         secs = isodate.parse_duration(duration_iso).total_seconds()
         if secs > MAX_DURATION_SECONDS:
             await processing_message.edit(
-                "❌ Streams longer than 15 min are not allowed. If u are the owner of this bot contact @xyz09723 to upgrade your plan"
+                "❌ 𝖲𝗍𝗋𝖾𝖺𝗆𝗌 𝗅𝗈𝗇𝗀𝖾𝗋 𝗍𝗁𝖺𝗇 15 𝗆𝗂𝗇 𝖺𝗋𝖾 𝗇𝗈𝗍 𝖺𝗅𝗅𝗈𝗐𝖾𝖽. 𝖨𝖿 𝗎 𝖺𝗋𝖾 𝗍𝗁𝖾 𝗈𝗐𝗇𝖾𝗋 𝗈𝖿 𝗍𝗁𝗂𝗌 𝖻𝗈𝗍 𝖼𝗈𝗇𝗍𝖺𝖼𝗍 @𝗑𝗒𝗓09723 𝗍𝗈 𝗎𝗉𝗀𝗋𝖺𝖽𝖾 𝗒𝗈𝗎𝗋 𝗉𝗅𝖺𝗇"
             )
             return
 
@@ -743,15 +743,15 @@ async def process_play_command(message: Message, query: str):
             await fallback_local_playback(chat_id, processing_message, chat_containers[chat_id][0])
         else:
             queue_buttons = InlineKeyboardMarkup([
-                [InlineKeyboardButton("⏭ Skip", callback_data="skip"),
-                 InlineKeyboardButton("🗑 Clear", callback_data="clear")]
+                [InlineKeyboardButton("⏭ 𝖲𝗄𝗂𝗉", callback_data="skip"),
+                 InlineKeyboardButton("🗑 𝖢𝗅𝖾𝖺𝗋", callback_data="clear")]
             ])
             await message.reply(
-                f"✨ Added to queue :\n\n"
-                f"**❍ Title ➥** {title}\n"
-                f"**❍ Time ➥** {readable}\n"
-                f"**❍ By ➥ ** {message.from_user.first_name if message.from_user else 'Unknown'}\n"
-                f"**Queue number:** {len(chat_containers[chat_id]) - 1}",
+                f"✨ 𝖠𝖽𝖽𝖾𝖽 𝗍𝗈 𝗊𝗎𝖾𝗎𝖾 :\n\n"
+                f"**❍ 𝖳𝗂𝗍𝗅𝖾 ➥** {title}\n"
+                f"**❍ 𝖳𝗂𝗆𝖾 ➥** {readable}\n"
+                f"**❍ 𝖡𝗒 ➥ ** {message.from_user.first_name if message.from_user else 'Unknown'}\n"
+                f"**𝖰𝗎𝖾𝗎𝖾 𝗇𝗎𝗆𝖻𝖾𝗋:** {len(chat_containers[chat_id]) - 1}",
                 reply_markup=queue_buttons
             )
             await processing_message.delete()
@@ -852,7 +852,7 @@ async def update_progress_caption(
             InlineKeyboardButton(text="▢", callback_data="stop")
         ]
         progress_button = InlineKeyboardButton(text=progress_bar, callback_data="progress")
-        playlist_button = InlineKeyboardButton(text="➕ᴀᴅᴅ тσ ρℓαυℓιѕт➕", callback_data="add_to_playlist")
+        playlist_button = InlineKeyboardButton(text="𝖠𝖽𝖽 𝗍𝗈 𝗉𝗅𝖺𝗒𝗅𝗂𝗌𝗍", callback_data="add_to_playlist")
 
         new_keyboard = InlineKeyboardMarkup([
             control_row,
@@ -920,7 +920,7 @@ async def fallback_local_playback(chat_id: int, message: Message, song_info: dic
         one_line = _one_line_title(song_info["title"])
         base_caption = (
             "<blockquote>"
-            "<b>🎧 Frozen ✘ Music Streaming</b> (Local Playback)\n\n"
+            "<b>🎧 Dream ✘ Music Streaming</b> (Local Playback)\n\n"
             f"❍ <b>Title:</b> {one_line}\n"
             f"❍ <b>Requested by:</b> {song_info['requester']}"
             "</blockquote>"
@@ -1001,7 +1001,7 @@ async def callback_query_handler(client, callback_query):
         try:
             await call_py.pause(chat_id)
             await callback_query.answer("⏸ Playback paused.")
-            await client.send_message(chat_id, f"⏸ Playback paused by {user.first_name}.")
+            await client.send_message(chat_id, f"⏸️ Playback paused by {user.first_name}.")
         except Exception as e:
             await callback_query.answer("❌ Error pausing playback.", show_alert=True)
 
@@ -1171,7 +1171,7 @@ async def stop_handler(client, message):
         playback_tasks[chat_id].cancel()
         del playback_tasks[chat_id]
 
-    await message.reply("⏹ Stopped the music and cleared the queue.")
+    await message.reply("❇️ Stopped the music and cleared the queue.")
 
 
 @bot.on_message(filters.command("song"))
@@ -1254,11 +1254,11 @@ async def skip_handler(client, message):
     # Check for next song
     if not chat_containers.get(chat_id):
         await status_message.edit(
-            f"⏩ Skipped **{skipped_song['title']}**.\n\n😔 No more songs in the queue."
+            f"⏩ Skipped **{skipped_song['title']}**.\n\n❄️ No more songs in the queue."
         )
     else:
         await status_message.edit(
-            f"⏩ Skipped **{skipped_song['title']}**.\n\n💕 Playing the next song..."
+            f"⏩ Skipped **{skipped_song['title']}**.\n\n❄️ Playing the next song..."
         )
         await skip_to_next_song(chat_id, status_message)
 
@@ -1304,7 +1304,7 @@ async def reboot_handler(_, message):
 
         await message.reply("♻️ Rebooted for this chat. All data for this chat has been cleared.")
     except Exception as e:
-        await message.reply(f"❌ Failed to reboot for this chat. Error: {str(e)}\n\n support - @frozensupport1")
+        await message.reply(f"❌ Failed to reboot for this chat. Error: {str(e)}\n\n support - @CloseFriendsCommunity")
 
 
 
